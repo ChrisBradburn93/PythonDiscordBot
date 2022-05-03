@@ -1,0 +1,12 @@
+{
+    "place":["Tavern","Country Estates", "Private Garden", "Lair", "Mountain Retreat","Circus Tent","Campsite","Road outside town","Docked ship"
+        ,"Shipyard","Docks","Fisherman's hut","Edge of Town","Orphanage","Fort","Guard's Barracks","City Hall","Town Hall","Church",
+        "Graveyard","Lighthouse","Riverbank","Gate","North Gate","Worship Trail","Hallowed Circle","Druid Compound","Paladin's Headquarters","Black Market"
+        ,"Rogue's Lookout","Fighter pit","Barbarian Tribal Embassy","Wizard Academy","Magic Pool","Artificer Workshop","Warlock Customer Service Centre"
+        ,"Bard's Dressing Room","Elven Pub","Dwarven Market","Dwarven Blacksmith","Town Trading Post","Public Library","Steps of the Palace","Lumber Yard",
+        "Elven Forest Sanctuary","Profane Graveyard","Lich Lair","Bandit Hospital","Urgent Care Sorcerer Camp","Mercenary Guild"],
+    
+    "AdjectiveTense":["Old","New","Ancient","Haunted"],
+    "AdjectiveOwner":["Noble's","King's","Ancient Emperor's"],
+    "Direction":["North","Northern","North-East","Most Northern"]
+}
