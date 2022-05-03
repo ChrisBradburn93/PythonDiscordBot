@@ -7,6 +7,8 @@ import json
 from dotenv import load_dotenv
 from discord.ext import commands
 from QHFunction import AdventureCall
+import asyncio
+import re
 
 intents = discord.Intents.default()
 intents.members = True
@@ -45,5 +47,19 @@ async def on_member_join(member):
 async def Adventure(ctx):
         response = AdventureCall()
         await ctx.send(response)
+
+@bot.command(name='Dice', help='Rolls dice. Duh. It is case sensitive. Use the format of DICETYPE (E.g D20) then AMOUNT (E.g 4) so that would look like "D20 4"')
+async def roll(ctx, sides, amount):
+  try:
+    sides = int(sides.split("D")[1])
+    rolls_list = []
+    for number in range(int(amount)):
+       # 1 is the minimum number the dice can have
+       rolls_list.append(random.randint(1, sides))
+    rolls = ", ".join(str(number) for number in rolls_list)
+    await ctx.send("Your dice rolls were: " + rolls)
+  except Exception as e:
+    print(e)
+    await ctx.send("Incorrect format for sides of dice (try something like \"!Dice d6 1\").")
 
 bot.run(TOKEN)
