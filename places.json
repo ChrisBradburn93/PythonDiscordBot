@@ -49,7 +49,8 @@
         "lich lair",
         "bandit hospital",
         "urgent care sorcerer camp",
-        "mercenary guild"
+        "mercenary guild",
+        "youth hostel"
     ],
     "AdjectiveTense": [
         "old",
@@ -155,21 +156,36 @@
         "Harpy"
     ],
     "Crime": [
-        "Murdering",
-        "Kidnapping",
-        "Torturing",
-        "Harassing",
-        "Enslaving",
-        "Impersonating",
-        "Robbing",
-        "Siphoning the souls of",
-        "Setting fire to the houses of",
-        "Assaulting",
-        "Defacing the homes of",
-        "Defiling the worship places of"
+        "murdering",
+        "kidnapping",
+        "torturing",
+        "harassing",
+        "enslaving",
+        "impersonating",
+        "robbing",
+        "siphoning the souls of",
+        "setting fire to the houses of",
+        "assaulting",
+        "defacing the homes of",
+        "defiling the worship places of",
+        "bullying"
     ],
     "Victims": [
         "The local Villagers",
-        "Local Peasants"
+        "Local Peasants",
+        "Minor Nobles in the area",
+        "People born near a certain holiday",
+        "Cows and Sheep",
+        "Livestock",
+        "Prized Livestock",
+        "Household Pets",
+        "Children born in the same year",
+        "Teenagers",
+        "Children of the Aristocracy",
+        "Children of the local Farmers",
+        "",
+        "",
+        "",
+        
     ]
 }
