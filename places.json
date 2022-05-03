@@ -160,6 +160,16 @@
         "Torturing",
         "Harassing",
         "Enslaving",
-        "",
+        "Impersonating",
+        "Robbing",
+        "Siphoning the souls of",
+        "Setting fire to the houses of",
+        "Assaulting",
+        "Defacing the homes of",
+        "Defiling the worship places of"
+    ],
+    "Victims": [
+        "The local Villagers",
+        "Local Peasants"
     ]
 }
