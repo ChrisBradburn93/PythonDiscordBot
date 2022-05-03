@@ -56,12 +56,32 @@
         "new",
         "ancient",
         "haunted",
-        "abandoned"
+        "abandoned",
+        "dilapidated",
+        "rennovated",
+        "ruined",
+        "crumbling"
     ],
     "AdjectiveOwner": [
         "Noble's",
         "King's",
-        "Ancient Emperor's"
+        "Ancient Emperor's",
+        "Sommalier's Guild",
+        "Merchant Palaces",
+        "Tavern Owner's",
+        "Imperial Court's",
+        "Fisherman's Wives",
+        "Brothel Guild's",
+        "Water King's",
+        "Prince's",
+        "Queen's",
+        "Princess'",
+        "Royal Concubine's",
+        "Grand Vizier's",
+        "Royal Guard's",
+        "Minor Noble's",
+        "Head of the Fishing Guild's",
+        "Your Mother's"
     ],
     "EnemyPrefix": [
         "Consecrated",
@@ -133,7 +153,13 @@
         "Phase Spider",
         "Lamia",
         "Harpy"
-
-
+    ],
+    "Crime": [
+        "Murdering",
+        "Kidnapping",
+        "Torturing",
+        "Harassing",
+        "Enslaving",
+        "",
     ]
 }
