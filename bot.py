@@ -5,6 +5,7 @@ import discord
 import random
 import json
 from dotenv import load_dotenv
+from discord.ext import commands
 from QHFunction import AdventureCall
 
 intents = discord.Intents.default()
@@ -15,6 +16,7 @@ TOKEN = os.getenv('DISCORD_TOKEN')
 GUILD = os.getenv('DISCORD_GUILD')
 
 client = discord.Client(intents=intents)
+bot = commands.Bot(command_prefix='!')
 
 @client.event
 async def on_ready():
@@ -28,25 +30,20 @@ async def on_ready():
     members = '\n - '.join([member.name for member in guild.members])
     print(f'Guild Members:\n - {members}')
 
-@client.event
+@bot.event
 async def on_ready():
-    print(f'{client.user.name} has connected to Discord!')
+    print(f'{bot.user.name} has connected to Discord!')
 
-@client.event
+@bot.event
 async def on_member_join(member):
     await member.create_dm()
     await member.dm_channel.send(
     f'Hi {member.name}, welcome to the server. Play nice or you''ll get got!'
     )
 
-@client.event
-async def on_message(message):
-    if message.author == client.user:
-        return
-
-    if message.content == 'I want to go on an adventure!':
+@bot.command(name='Adventure', help='Generates an adventure hook for use in D&D')
+async def Adventure(ctx):
         response = AdventureCall()
-        await message.channel.send(response)
+        await ctx.send(response)
 
-
-client.run(TOKEN)
+bot.run(TOKEN)

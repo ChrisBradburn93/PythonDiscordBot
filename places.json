@@ -63,6 +63,14 @@
         "ruined",
         "crumbling"
     ],
+    "EventAdjective": [
+        "disturbance",
+        "ruckus",
+        "panic",
+        "strange happenings",
+        "strange rumours",
+        "most unusual events"
+    ],
     "AdjectiveOwner": [
         "Noble's",
         "King's",
@@ -153,7 +161,9 @@
         "Land-Shark",
         "Phase Spider",
         "Lamia",
-        "Harpy"
+        "Harpy",
+        "Elf Archer",
+        "Dwarf Warrior"
     ],
     "Crime": [
         "murdering",
@@ -168,24 +178,48 @@
         "assaulting",
         "defacing the homes of",
         "defiling the worship places of",
-        "bullying"
+        "bullying",
+        "assassinating",
+        "mutilating",
+        "stealing the memories of",
+        "cursing",
+        "hexing",
+        "spoiling the food of",
+        "stealing the shoes of",
+        "biting off the fingers and toes of",
+        "burning alive",
+        "freezing",
+        "fattening up"
     ],
     "Victims": [
-        "The local Villagers",
-        "Local Peasants",
-        "Minor Nobles in the area",
-        "People born near a certain holiday",
-        "Cows and Sheep",
-        "Livestock",
-        "Prized Livestock",
-        "Household Pets",
-        "Children born in the same year",
-        "Teenagers",
-        "Children of the Aristocracy",
-        "Children of the local Farmers",
-        "",
-        "",
-        "",
-        
+        "the local villagers",
+        "local peasants",
+        "minor nobles in the area",
+        "people born near a certain holiday",
+        "cows and sheep",
+        "livestock",
+        "prized livestock",
+        "household pets",
+        "children born in the same year",
+        "teenagers",
+        "children of the aristocracy",
+        "children of the local farmers",
+        "eligible bachelors",
+        "maidens",
+        "virgins",
+        "orphans",
+        "patrons of a certain tavern",
+        "meat eaters",
+        "shepherds",
+        "craftspeople",
+        "young wives",
+        "students of the local magic academy",
+        "soldiers in training",
+        "children of mixed parentage",
+        "anyone who has displayed magical abilities",
+        "lawkeepers",
+        "tavern owners",
+        "bankers"       
     ]
+   
 }
