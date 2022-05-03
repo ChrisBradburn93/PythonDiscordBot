@@ -5,7 +5,7 @@ import discord
 import random
 import json
 from dotenv import load_dotenv
-from QuestHook import AdventureCall
+from QHFunction import AdventureCall
 
 intents = discord.Intents.default()
 intents.members = True
