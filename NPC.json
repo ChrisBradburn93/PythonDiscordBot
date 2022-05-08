@@ -1,6 +1,29 @@
 {
-    "FName" : ["Aaron", "George"],
-    "LName" : ["Aaronson", "Georgeson"],
-    "Class" : []
-
+    "FName": [
+        "Aaron",
+        "George"
+    ],
+    "LName": [
+        "Aaronson",
+        "Georgeson"
+    ],
+    "Class": [
+        {
+        "Artificer" : {
+            "Subclass" : [""]
+        },
+        "Barbarian",
+        "Bard",
+        "Blood Hunter",
+        "Cleric",
+        "Druid",
+        "Fighter",
+        "Monk",
+        "Paladin",
+        "Ranger",
+        "Rogue",
+        "Sorcerer",
+        "Warlock",
+        "Wizard"
+    ]
 }
