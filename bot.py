@@ -6,9 +6,8 @@ import random
 import json
 from dotenv import load_dotenv
 from discord.ext import commands
-from QHFunction import AdventureCall
-import asyncio
-import re
+from AdventureFunction import AdventureCall
+from NPCFunction import NPCCall
 
 intents = discord.Intents.default()
 intents.members = True
@@ -18,7 +17,7 @@ TOKEN = os.getenv('DISCORD_TOKEN')
 GUILD = os.getenv('DISCORD_GUILD')
 
 client = discord.Client(intents=intents)
-bot = commands.Bot(command_prefix='!')
+bot = commands.Bot(command_prefix='!', case_insensitive=True)
 
 @client.event
 async def on_ready():
@@ -43,9 +42,14 @@ async def on_member_join(member):
     f'Hi {member.name}, welcome to the server. Play nice or you''ll get got!'
     )
 
-@bot.command(name='Adventure', help='Generates an adventure hook for use in D&D')
+@bot.command(name='AV', help='Generates an adventure hook for use in D&D')
 async def Adventure(ctx):
         response = AdventureCall()
+        await ctx.send(response)
+
+@bot.command(name='NPC', help='Generates a NPC for use in D&D')
+async def NPC(ctx):
+        response = NPCCall()
         await ctx.send(response)
 
 @bot.command(name='Dice', help='Rolls dice. Duh. It is case sensitive. Use the format of DICETYPE (E.g D20) then AMOUNT (E.g 4) so that would look like "D20 4"')

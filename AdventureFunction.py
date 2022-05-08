@@ -5,8 +5,8 @@ import random
 
 def AdventureCall():
 
-    with open('places.json') as d:
-        data = json.load(d)
+    with open('Adventure.json') as a:
+        data = json.load(a)
     P = data["Place"]
     AT = data["AdjectiveTense"]
     AO = data["AdjectiveOwner"]
