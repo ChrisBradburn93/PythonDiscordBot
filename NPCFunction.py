@@ -12,6 +12,5 @@ def NPCCall():
     Female_FN = data["Dragonborn_Female_Fname"]
     LN = data["Dragonborn_Lname"]
     CL = data["Class"]
-
+    
     return (random.choice(Male_FN)+" "+ (random.choice(LN)+" is a "+(random.choice(CL))))
- 
