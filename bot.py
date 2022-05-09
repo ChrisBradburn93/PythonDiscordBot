@@ -9,6 +9,8 @@ from discord.ext import commands
 from AdventureFunction import AdventureCall
 from NPCFunction import NPCCall
 
+
+
 intents = discord.Intents.default()
 intents.members = True
 
@@ -18,15 +20,18 @@ GUILD = os.getenv('DISCORD_GUILD')
 
 client = discord.Client(intents=intents)
 bot = commands.Bot(command_prefix='!', case_insensitive=True)
-#filenames = os.listdir("simple_images\\Dragonborn_Female_portraits")
-#filenames = [ name for name in filenames 
- #              if name.lower().endswith( ('.jpeg' )) ]
-#selected_file = random.choice(filenames)
 
-images = os.path.join(os.getcwd(), "simple_images")
 
+
+#if Gender = Female AND Race = Dragonborn
+DB_Fem_images = os.path.join(os.getcwd(), "simple_images\\Dragonborn_Female_portraits")
 def select_random_image_path():
-    return os.path.join(images, random.choice(os.listdir(images)))
+   return os.path.join(DB_Fem_images, random.choice(os.listdir(DB_Fem_images)))
+
+#if Gender = Male AND Race = Dragonborn
+#DB_Male_images = os.path.join(os.getcwd(), "simple_images\\Dragonborn_Male_portraits")
+#def select_random_image_path():
+#    return os.path.join(DB_Male_images, random.choice(os.listdir(DB_Male_images)))
 
 
 @client.event
@@ -64,7 +69,7 @@ async def NPC(ctx):
         await ctx.send(file=discord.File(select_random_image_path()))
         
 
-@bot.command(name='Dice', help='Rolls dice. Duh. It is case sensitive. Use the format of DICETYPE (E.g D20) then AMOUNT (E.g 4) so that would look like "D20 4"')
+@bot.command(name='Dice', help='Rolls dice. Duh. It is case sensitive."')
 async def roll(ctx, sides, amount):
   try:
     sides = int(sides.split("D")[1])
