@@ -18,6 +18,16 @@ GUILD = os.getenv('DISCORD_GUILD')
 
 client = discord.Client(intents=intents)
 bot = commands.Bot(command_prefix='!', case_insensitive=True)
+#filenames = os.listdir("simple_images\\Dragonborn_Female_portraits")
+#filenames = [ name for name in filenames 
+ #              if name.lower().endswith( ('.jpeg' )) ]
+#selected_file = random.choice(filenames)
+
+images = os.path.join(os.getcwd(), "simple_images")
+
+def select_random_image_path():
+    return os.path.join(images, random.choice(os.listdir(images)))
+
 
 @client.event
 async def on_ready():
@@ -51,6 +61,8 @@ async def Adventure(ctx):
 async def NPC(ctx):
         response = NPCCall()
         await ctx.send(response)
+        await ctx.send(file=discord.File(select_random_image_path()))
+        
 
 @bot.command(name='Dice', help='Rolls dice. Duh. It is case sensitive. Use the format of DICETYPE (E.g D20) then AMOUNT (E.g 4) so that would look like "D20 4"')
 async def roll(ctx, sides, amount):
@@ -64,6 +76,6 @@ async def roll(ctx, sides, amount):
     await ctx.send("Your dice rolls were: " + rolls)
   except Exception as e:
     print(e)
-    await ctx.send("Incorrect format for sides of dice (try something like \"!Dice d6 1\").")
+    await ctx.send("Incorrect format for sides of dice (try something like \"!Dice D6 1 (Case sensitive for D)\").")
 
 bot.run(TOKEN)
