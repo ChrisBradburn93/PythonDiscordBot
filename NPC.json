@@ -500,5 +500,6 @@
         "Locathah",
         "Tortle",
         "Verdan"
-    ]
+    ],
+    "Gender": ["Male", "Female"]
 }
