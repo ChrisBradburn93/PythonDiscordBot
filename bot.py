@@ -24,7 +24,7 @@ bot = commands.Bot(command_prefix='!', case_insensitive=True)
 
 
 #if Gender = Female AND Race = Dragonborn
-DB_Fem_images = os.path.join(os.getcwd(), "simple_images\\Dragonborn_Female_portraits")
+DB_Fem_images = os.path.join(os.getcwd(), "simple_images\\Elf_Female_DND_Portraits")
 def select_random_image_path():
    return os.path.join(DB_Fem_images, random.choice(os.listdir(DB_Fem_images)))
 

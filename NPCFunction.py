@@ -24,14 +24,14 @@ def NPCCall():
 
     DWMale_FN = data["Dwarf_Male_Fname"]
     DWFemale_FN = data["Dwarf_Female_Fname"]
-    DWMLN = data["Dwarf_Lname"]
+    DWLN = data["Dwarf_Lname"]
 
     GNMale_FN = data["Gnome_Male_Fname"]
     GNFemale_FN = data["Gnome_Female_Fname"]
     GNLN = data["Gnome_Lname"]
 
     HFMale_FN = data["Halfling_Male_Fname"]
-    HFFemale = data["Halfling_Female_Fname"]
+    HFFemale_FN = data["Halfling_Female_Fname"]
     HFLN = data["Halfling_Lname"]
 
     HELMale_FN = data["Half-Elf_Male_Fname"]
@@ -40,12 +40,12 @@ def NPCCall():
 
     CL = data["Class"]
     Gender = ["Male", "Female"]
-    Race =  ["Dragonborn"]
+    Race =  ["Elf"]
 
 
 
     if random.choice(Gender)=="Male" and  random.choice(Race)=="Dragonborn":
-         return (random.choice(DBMale_FN)+" "+ (random.choice(DBLN)+" is a male "+(random.choice(CL))))
+     return (random.choice(DBMale_FN)+" "+ (random.choice(DBLN)+" is a male "+(random.choice(CL))))
 
     if random.choice(Gender) =="Female" and random.choice(Race) == "Dragonborn":
          return (random.choice(DBFemale_FN)+" "+ (random.choice(DBLN)+" is a female "+(random.choice(CL))))
@@ -57,10 +57,10 @@ def NPCCall():
          return (random.choice(HMFemale_FN)+" "+ (random.choice(HMLN)+" is a female "+(random.choice(CL))))
 
     if random.choice(Gender)=="Male" and  random.choice(Race)=="Elf":
-         return (random.choice(ELMale_FN)+" "+ (random.choice(ELLN)+" is a male "+(random.choice(CL))))
+     return (random.choice(ELMale_FN)+" "+ (random.choice(ELLN)+" is a male "+(random.choice(CL))))
 
-    if random.choice(Gender) =="Female" and random.choice(Race) == "Elf":
-         return (random.choice(ELFemale_FN)+" "+ (random.choice(ELLN)+" is a female "+(random.choice(CL))))
+    if random.choice(Gender) =="Female" and random.choice(Race) =="Elf":
+     return (random.choice(ELFemale_FN)+" "+ (random.choice(ELLN)+" is a female "+(random.choice(CL))))
          
     if random.choice(Gender)=="Male" and  random.choice(Race)=="Dwarf":
          return (random.choice(DWMale_FN)+" "+ (random.choice(DWLN)+" is a male "+(random.choice(CL))))
