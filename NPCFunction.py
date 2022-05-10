@@ -4,8 +4,27 @@ import random
 import os
 from tarfile import GNUTYPE_LONGLINK
 
+CL = [ "Artificer",
+        "Barbarian",
+        "Bard",
+        "Blood Hunter",
+        "Cleric",
+        "Druid",
+        "Fighter",
+        "Monk",
+        "Paladin",
+        "Ranger",
+        "Rogue",
+        "Sorcerer",
+        "Warlock",
+        "Wizard"
+     ]
+Gender = ["Male", "Female"]
+Race =  [ "Dragonborn",
+          "Elf"
+        ]
 
-
+print(CL)
 def NPCCall():
 
     with open('NPC.json') as n:
@@ -37,12 +56,6 @@ def NPCCall():
     HELMale_FN = data["Half-Elf_Male_Fname"]
     HELFemale_FN = data["Half-Elf_Female_Fname"]
     HELLN = data["Half-Elf_Lname"]
-
-    CL = data["Class"]
-    Gender = ["Male", "Female"]
-    Race =  ["Elf"]
-
-
 
     if random.choice(Gender)=="Male" and  random.choice(Race)=="Dragonborn":
      return (random.choice(DBMale_FN)+" "+ (random.choice(DBLN)+" is a male "+(random.choice(CL))))

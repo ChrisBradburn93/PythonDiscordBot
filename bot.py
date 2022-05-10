@@ -1,4 +1,5 @@
 # bot.py
+from logging import exception
 import os
 from urllib import response
 import discord
@@ -8,7 +9,7 @@ from dotenv import load_dotenv
 from discord.ext import commands
 from AdventureFunction import AdventureCall
 from NPCFunction import NPCCall
-
+from NPCFunction import Gender,Race
 
 
 intents = discord.Intents.default()
@@ -22,16 +23,26 @@ client = discord.Client(intents=intents)
 bot = commands.Bot(command_prefix='!', case_insensitive=True)
 
 
-
-#if Gender = Female AND Race = Dragonborn
-DB_Fem_images = os.path.join(os.getcwd(), "simple_images\\Elf_Female_DND_Portraits")
 def select_random_image_path():
-   return os.path.join(DB_Fem_images, random.choice(os.listdir(DB_Fem_images)))
+    if random.choice(Gender) == "Female" and random.choice(Race) == "Elf":
+        Elf_Fem_images = os.path.join(os.getcwd(), "\\Users\\Gamer\\Repos\\GitHubCloned\\PythonDiscordBot\\simple_images\\Elf_Female_DND_Portraits")
+        return os.path.join(Elf_Fem_images, random.choice(os.listdir(Elf_Fem_images)))
 
-#if Gender = Male AND Race = Dragonborn
-#DB_Male_images = os.path.join(os.getcwd(), "simple_images\\Dragonborn_Male_portraits")
-#def select_random_image_path():
-#    return os.path.join(DB_Male_images, random.choice(os.listdir(DB_Male_images)))
+    elif random.choice(Gender) == "Male" and random.choice(Race) == "Elf":
+        Elf_Male_images = os.path.join(os.getcwd(), "\\Users\\Gamer\\Repos\\GitHubCloned\\PythonDiscordBot\\simple_images\\Elf_Male_DND_Portraits")
+        return os.path.join(Elf_Male_images, random.choice(os.listdir(Elf_Male_images)))
+
+    elif random.choice(Gender) == "Male" and random.choice(Race) == "Dragonborn":
+        DB_Male_images = os.path.join(os.getcwd(), "\\Users\\Gamer\\Repos\\GitHubCloned\\PythonDiscordBot\\simple_images\\Dragonborn_Male_portraits")
+        return os.path.join(DB_Male_images, random.choice(os.listdir(DB_Male_images)))
+
+    elif random.choice(Gender) == "Female" and random.choice(Race) == "Dragonborn":
+        DB_Female_images = os.path.join(os.getcwd(), "\\Users\\Gamer\\Repos\\GitHubCloned\\PythonDiscordBot\\simple_images\\Dragonborn_Female_portraits")
+        return os.path.join(DB_Female_images, random.choice(os.listdir(DB_Female_images)))
+
+    else:  
+        Error_Image = os.path.join(os.getcwd(), "\\Users\\Gamer\\Repos\\GitHubCloned\\PythonDiscordBot\\simple_images\\errorcache")
+        return os.path.join(Error_Image, random.choice(os.listdir(Error_Image)))
 
 
 @client.event
