@@ -24,7 +24,6 @@ Race =  [ "Dragonborn",
           "Elf"
         ]
 
-print(CL)
 def NPCCall():
 
     with open('NPC.json') as n:
